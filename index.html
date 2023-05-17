@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ubi Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+    <!-- WEBSITE ICON -->
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1095220550198104176/1106059470930464768/Logo.png"/>
+
+    <!-- META TAG FOR RESPONSIVE DESIGN -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="home-banner">
+    <div id="navigation" class="nav-text">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container" style="max-width: 1200px;">
+          <a class="navbar-brand" href="#">
+            <span class="navbar-logo-text">UBI CALCULATOR</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  
+    <img src="https://media.discordapp.net/attachments/1095220550198104176/1108385425745252364/bg.png" alt="Banner Image" draggable="false">
+  </div>
+  
+      <div class="center-container">
+        <div class="container-calculator metric" style="display: inline-block; vertical-align: top;">
+      <h2>Metric</h2>
+      <div class="form-group">
+        <label for="millimeters">Millimeters:</label>
+        <input type="number" id="millimeters" class="form-control" oninput="convertLength('millimeters', this.value)">
+      </div>
+      <div class="form-group">
+        <label for="centimeters">Centimeters:</label>
+        <input type="number" id="centimeters" class="form-control" oninput="convertLength('centimeters', this.value)">
+      </div>
+      <div class="form-group">
+        <label for="meters">Meters:</label>
+        <input type="number" id="meters" class="form-control" oninput="convertLength('meters', this.value)">
+      </div>
+      <div class="form-group">
+        <label for="kilometers">Kilometers:</label>
+        <input type="number" id="kilometers" class="form-control" oninput="convertLength('kilometers', this.value)">
+      </div>
+      <button onclick="clearValues()" class="btn clear-button">Clear</button>
+    </div>
+    <div class="text-side" style="display: inline-block;">
+      <h1>Length Converter</h1>
+      <p>Created by <b>Ellie Arbues</b><br>
+        Last updated <b>May 17, 2023</b>
+      </p>
+      <button class="btn btn-cite" id="openModal">Cite</button>
+      <hr>
+      <p>The length converter is a useful tool that allows for easy conversion between various units of length, including the metric system.</p>
+      <hr>
+      <p><b>Metric Conversion Chart</b></p>
+      <img src="https://uploads-cdn.omnicalculator.com/images/metric-length-conversion.png" alt="Metric Conversion Chart">
+    </div>
+  </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Cite</h2>
+      <span id="closeModal" class="close">&times;</span>
+    </div>
+    <div class="others">
+      <textarea class="citation-text" readonly>Pamuła, H. "Length Converter". Available at: https://www.omnicalculator.com/conversion/length-converter.</textarea>
+      <button id="copyButton" class="btn btn-solid copy-btn">Copy to Clipboard</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="modal.js"></script>
+</body>
+</html>
